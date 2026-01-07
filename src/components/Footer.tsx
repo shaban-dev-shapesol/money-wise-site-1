@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
 import { FadeUp } from "@/components/ui/motion";
-import logo from "@/assets/moneywise-logo.png";
+import logoWhite from "@/assets/moneywise-logo-white.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -34,9 +34,9 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <Link to="/" className="flex items-center mb-4">
                 <img 
-                  src={logo} 
+                  src={logoWhite} 
                   alt="Moneywise" 
-                  className="h-10 brightness-0 invert"
+                  className="h-10"
                 />
               </Link>
               <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6 max-w-sm">
