@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
 import { FadeUp } from "@/components/ui/motion";
 
@@ -6,19 +7,19 @@ const Footer = () => {
 
   const footerLinks = {
     Company: [
-      { name: "About Us", href: "/about" },
-      { name: "Pricing", href: "/pricing" },
-      { name: "Reviews", href: "/#reviews" },
+      { name: "About Us", href: "/about", isExternal: false },
+      { name: "Pricing", href: "/pricing", isExternal: false },
+      { name: "Reviews", href: "/#reviews", isExternal: false },
     ],
     Support: [
-      { name: "Contact Us", href: "/contact" },
-      { name: "FAQ", href: "/#faq" },
-      { name: "Help Center", href: "/contact" },
+      { name: "Contact Us", href: "/contact", isExternal: false },
+      { name: "FAQ", href: "/#faq", isExternal: false },
+      { name: "Help Center", href: "/contact", isExternal: false },
     ],
     Legal: [
-      { name: "Privacy Policy", href: "#" },
-      { name: "Terms of Service", href: "#" },
-      { name: "Cookie Policy", href: "#" },
+      { name: "Privacy Policy", href: "#", isExternal: true },
+      { name: "Terms of Service", href: "#", isExternal: true },
+      { name: "Cookie Policy", href: "#", isExternal: true },
     ],
   };
 
@@ -30,14 +31,14 @@ const Footer = () => {
           <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <a href="#" className="flex items-center gap-2 mb-4">
+              <Link to="/" className="flex items-center gap-2 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
                   <span className="text-accent-foreground font-bold text-lg">F</span>
                 </div>
                 <span className="font-bold text-xl">
                   FocusMembers
                 </span>
-              </a>
+              </Link>
               <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6 max-w-sm">
                 Simple, practical monthly tools to help you stay in control of your spending, plan ahead, and enjoy exclusive member savings.
               </p>
@@ -56,12 +57,21 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link.name}>
-                      <a
-                        href={link.href}
-                        className="text-primary-foreground/60 hover:text-accent transition-colors text-sm"
-                      >
-                        {link.name}
-                      </a>
+                      {link.isExternal ? (
+                        <a
+                          href={link.href}
+                          className="text-primary-foreground/60 hover:text-accent transition-colors text-sm"
+                        >
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link
+                          to={link.href}
+                          className="text-primary-foreground/60 hover:text-accent transition-colors text-sm"
+                        >
+                          {link.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
