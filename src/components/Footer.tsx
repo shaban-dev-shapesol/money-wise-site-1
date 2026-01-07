@@ -33,17 +33,17 @@ const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-2">
               <Link to="/" className="flex items-center mb-4">
-                <img 
-                  src={logoWhite} 
-                  alt="Moneywise" 
-                  className="h-10"
-                />
+                <img src={logoWhite} alt="Moneywise" className="h-[3rem]" />
               </Link>
               <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6 max-w-sm">
-                Simple, practical monthly tools to help you stay in control of your spending, plan ahead, and enjoy exclusive member savings.
+                Simple, practical monthly tools to help you stay in control of your spending, plan ahead, and enjoy
+                exclusive member savings.
               </p>
               <div className="space-y-2">
-                <a href="mailto:support@moneywise.com" className="flex items-center gap-3 text-primary-foreground/60 hover:text-accent transition-colors text-sm">
+                <a
+                  href="mailto:support@moneywise.com"
+                  className="flex items-center gap-3 text-primary-foreground/60 hover:text-accent transition-colors text-sm"
+                >
                   <Mail size={16} />
                   support@moneywise.com
                 </a>
@@ -82,9 +82,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-primary-foreground/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-primary-foreground/40 text-sm">
-            © {currentYear} Money Wise. All rights reserved.
-          </p>
+          <p className="text-primary-foreground/40 text-sm">© {currentYear} Money Wise. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span className="text-primary-foreground/40 text-sm">
               £3.99/month • Cancel Anytime • Free 1-Month Trial
