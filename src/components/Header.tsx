@@ -118,20 +118,20 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+          <div className="md:hidden mt-4 pb-4 animate-fade-in bg-background rounded-xl p-4 shadow-lg border border-border">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
                   onClick={() => handleHashNavigation(link.href)}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium py-2"
+                  className="text-foreground hover:text-accent transition-colors duration-200 text-sm font-medium py-2"
                 >
                   {link.name}
                 </Link>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="justify-start" asChild>
+                <Button variant="ghost" size="sm" className="justify-start text-foreground" asChild>
                   <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
                 </Button>
                 <Button variant="accent" size="sm">
