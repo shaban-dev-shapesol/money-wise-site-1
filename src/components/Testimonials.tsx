@@ -35,9 +35,7 @@ const Testimonials = () => {
           </FadeUp>
           <FadeUp delay={0.1}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-              What Our Members
-              <br />
-              <span className="text-accent">Are Saying</span>
+              What Our Members Are Saying
             </h2>
           </FadeUp>
         </div>
