@@ -38,7 +38,7 @@ const Pricing = () => {
                     Most Popular
                   </span>
                   <h2 className="text-2xl font-bold text-foreground mb-2">
-                    FocusMembers Pro
+                    Money Wise Pro
                   </h2>
                   <div className="flex items-baseline justify-center gap-1">
                     <span className="text-5xl font-bold text-foreground">£3.99</span>

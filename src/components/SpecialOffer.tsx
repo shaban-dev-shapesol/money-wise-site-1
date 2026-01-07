@@ -29,7 +29,7 @@ const SpecialOffer = () => {
 
             <FadeUp delay={0.2}>
               <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto mb-8">
-                Unlock exclusive member-only discount vouchers, limited-time deals, and monthly freebies — available only inside your FocusMembers dashboard.
+                Unlock exclusive member-only discount vouchers, limited-time deals, and monthly freebies — available only inside your Money Wise dashboard.
               </p>
             </FadeUp>
 

@@ -13,10 +13,10 @@ const About = () => {
                 Who We Are
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-                FocusMembers
+                Money Wise
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-                FocusMembers delivers simple, practical monthly tools to help you stay in control of your spending, plan ahead, and enjoy exclusive member savings — all in one place.
+                Money Wise delivers simple, practical monthly tools to help you stay in control of your spending, plan ahead, and enjoy exclusive member savings — all in one place.
               </p>
 
               {/* Mission & Vision Cards */}
@@ -55,9 +55,9 @@ const About = () => {
                 <div className="aspect-[4/3] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center p-8">
                   <div className="text-center">
                     <div className="w-20 h-20 mx-auto rounded-2xl bg-accent/20 flex items-center justify-center mb-6">
-                      <span className="text-accent text-4xl font-bold">F</span>
+                      <span className="text-accent text-4xl font-bold">M</span>
                     </div>
-                    <h3 className="text-primary-foreground text-2xl font-bold mb-2">Focus Members</h3>
+                    <h3 className="text-primary-foreground text-2xl font-bold mb-2">Money Wise</h3>
                     <p className="text-primary-foreground/70">Your Financial Companion</p>
                   </div>
                 </div>

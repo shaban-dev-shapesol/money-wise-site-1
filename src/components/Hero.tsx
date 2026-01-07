@@ -144,7 +144,7 @@ const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-primary-foreground/10">
               <img 
                 src={dashboardMockup} 
-                alt="FocusMembers Dashboard - Budget tracker, discount codes, planner and savings goals" 
+                alt="Money Wise Dashboard - Budget tracker, discount codes, planner and savings goals" 
                 className="w-full h-auto"
               />
             </div>

@@ -35,7 +35,7 @@ const About = () => {
           <FadeUp>
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                About FocusMembers
+                About Money Wise
               </h1>
               <p className="text-lg text-muted-foreground">
                 We're on a mission to make financial planning simple, accessible, and rewarding for everyone.
@@ -69,7 +69,7 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    FocusMembers was born from a simple observation: managing money shouldn't be complicated. Yet, for many people, it feels overwhelming and stressful.
+                    Money Wise was born from a simple observation: managing money shouldn't be complicated. Yet, for many people, it feels overwhelming and stressful.
                   </p>
                   <p>
                     We created a membership that combines practical budgeting tools with exclusive savings opportunities, making it easier than ever to stay on top of your finances.
