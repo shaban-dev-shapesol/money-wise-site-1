@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Star, Shield } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -7,8 +8,31 @@ const Hero = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-primary" style={{ background: 'var(--hero-gradient)' }}>
         {/* Gradient Orbs */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-subtle" />
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-subtle" style={{ animationDelay: '1s' }} />
+        <motion.div 
+          className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.3, 0.2],
+          }}
+          transition={{ 
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"
+          animate={{ 
+            scale: [1, 1.15, 1],
+            opacity: [0.1, 0.2, 0.1],
+          }}
+          transition={{ 
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+        />
         
         {/* Grid Pattern */}
         <div 
@@ -22,34 +46,59 @@ const Hero = () => {
       <div className="container-custom relative z-10 pt-24">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8 animate-fade-in">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8"
+          >
             <Users size={16} className="text-accent" />
             <span className="text-accent text-sm font-medium">Join 45,000+ Members</span>
-          </div>
+          </motion.div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6"
+          >
             Smarter Money
             <br />
             <span className="text-gradient">Management Made Simple</span>
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-8 animate-fade-in-delay">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-lg sm:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-8"
+          >
             Get monthly money-management tools, exclusive deals, and member-only perks that help you stay organised, save smarter, and plan better.
-          </p>
+          </motion.p>
 
           {/* Price Tag */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-10 animate-fade-in-delay">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-10"
+          >
             <span className="text-primary-foreground font-bold text-2xl">From £3.99/month</span>
             <span className="text-primary-foreground/60">•</span>
             <span className="text-accent font-semibold">Try 1 month free</span>
             <span className="text-primary-foreground/60">•</span>
             <span className="text-primary-foreground/70 italic">Cancel anytime</span>
-          </div>
+          </motion.div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-delay">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          >
             <Button variant="accent" size="lg" className="w-full sm:w-auto group">
               Start Your Free Trial
               <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
@@ -57,10 +106,15 @@ const Hero = () => {
             <Button variant="hero-outline" size="lg" className="w-full sm:w-auto">
               Learn More
             </Button>
-          </div>
+          </motion.div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 animate-fade-in-delay">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="flex flex-wrap items-center justify-center gap-6 md:gap-10"
+          >
             <div className="flex items-center gap-2 text-primary-foreground/60">
               <Shield size={20} className="text-accent" />
               <span className="text-sm">Secure & Private</span>
@@ -73,7 +127,7 @@ const Hero = () => {
               <Users size={20} className="text-accent" />
               <span className="text-sm">45,000+ Active Members</span>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
