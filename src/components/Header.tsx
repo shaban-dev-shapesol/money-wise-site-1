@@ -92,16 +92,8 @@ const Header = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              className={useScrolledStyle ? "text-muted-foreground" : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10"}
-              asChild
-            >
-              <Link to="/contact">Contact</Link>
-            </Button>
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
             <Button variant="accent" size="sm">
               Start Free Trial
             </Button>
