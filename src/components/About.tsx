@@ -13,7 +13,7 @@ const About = () => {
                 Who We Are
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Focus<span className="text-gradient">Members</span>
+                Focus<span className="text-accent">Members</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">
                 FocusMembers delivers simple, practical monthly tools to help you stay in control of your spending, plan ahead, and enjoy exclusive member savings — all in one place.

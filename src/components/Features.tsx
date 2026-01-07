@@ -40,7 +40,7 @@ const Features = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               Everything You Need to
               <br />
-              <span className="text-gradient">Stay in Control</span>
+              <span className="text-accent">Stay in Control</span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.2}>
