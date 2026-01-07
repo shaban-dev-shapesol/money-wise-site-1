@@ -165,10 +165,14 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Text Gradient */
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--accent-gradient);
+  /* Text highlight - using underline accent instead of gradient */
+  .text-highlight {
+    @apply relative inline-block;
+  }
+
+  .text-highlight::after {
+    content: '';
+    @apply absolute bottom-1 left-0 right-0 h-3 bg-accent/20 -z-10 rounded-sm;
   }
 
   /* Animated underline */

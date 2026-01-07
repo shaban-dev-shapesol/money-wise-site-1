@@ -37,7 +37,7 @@ const Testimonials = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               What Our Members
               <br />
-              <span className="text-gradient">Are Saying</span>
+              <span className="text-accent">Are Saying</span>
             </h2>
           </FadeUp>
         </div>

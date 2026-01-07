@@ -63,9 +63,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6"
           >
-            Smarter Money
+            Smarter Money Management
             <br />
-            <span className="text-gradient">Management Made Simple</span>
+            <span className="text-accent">Made Simple</span>
           </motion.h1>
 
           {/* Subtitle */}
