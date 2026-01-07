@@ -38,9 +38,7 @@ const Features = () => {
           </FadeUp>
           <FadeUp delay={0.1}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Everything You Need to
-              <br />
-              <span className="text-accent">Stay in Control</span>
+              Everything You Need to Stay in Control
             </h2>
           </FadeUp>
           <FadeUp delay={0.2}>

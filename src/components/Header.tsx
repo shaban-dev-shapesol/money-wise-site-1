@@ -37,7 +37,7 @@ const Header = () => {
               <span className="text-accent-foreground font-bold text-lg">F</span>
             </div>
             <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-              Focus<span className="text-accent">Members</span>
+              FocusMembers
             </span>
           </a>
 

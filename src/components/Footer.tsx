@@ -35,7 +35,7 @@ const Footer = () => {
                   <span className="text-accent-foreground font-bold text-lg">F</span>
                 </div>
                 <span className="font-bold text-xl">
-                  Focus<span className="text-accent">Members</span>
+                  FocusMembers
                 </span>
               </a>
               <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6 max-w-sm">
