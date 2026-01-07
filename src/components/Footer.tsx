@@ -6,14 +6,14 @@ const Footer = () => {
 
   const footerLinks = {
     Company: [
-      { name: "About Us", href: "#about" },
-      { name: "Our Mission", href: "#about" },
-      { name: "Reviews", href: "#reviews" },
+      { name: "About Us", href: "/about" },
+      { name: "Pricing", href: "/pricing" },
+      { name: "Reviews", href: "/#reviews" },
     ],
     Support: [
-      { name: "Contact Us", href: "#" },
-      { name: "FAQ", href: "#faq" },
-      { name: "Help Center", href: "#" },
+      { name: "Contact Us", href: "/contact" },
+      { name: "FAQ", href: "/#faq" },
+      { name: "Help Center", href: "/contact" },
     ],
     Legal: [
       { name: "Privacy Policy", href: "#" },
