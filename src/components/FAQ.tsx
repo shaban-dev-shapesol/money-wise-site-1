@@ -8,7 +8,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 
 const faqs = [
   {
-    question: "What is FocusMembers?",
+    question: "What is Money Wise?",
     answer:
       "A monthly subscription (£3.99/month) offering budgeting tools, planners, trackers, discount codes, freebies, and practical monthly resources all delivered digitally.",
   },
