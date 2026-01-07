@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
 import { FadeUp } from "@/components/ui/motion";
+import logo from "@/assets/moneywise-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,13 +32,12 @@ const Footer = () => {
           <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <Link to="/" className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
-                  <span className="text-accent-foreground font-bold text-lg">M</span>
-                </div>
-                <span className="font-bold text-xl">
-                  Money Wise
-                </span>
+              <Link to="/" className="flex items-center mb-4">
+                <img 
+                  src={logo} 
+                  alt="Moneywise" 
+                  className="h-10 brightness-0 invert"
+                />
               </Link>
               <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6 max-w-sm">
                 Simple, practical monthly tools to help you stay in control of your spending, plan ahead, and enjoy exclusive member savings.
