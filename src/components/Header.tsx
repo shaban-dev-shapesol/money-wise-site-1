@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/moneywise-logo.png";
+import logoWhite from "@/assets/moneywise-logo-white.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,7 +55,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img 
-              src={logo} 
+              src={useScrolledStyle ? logo : logoWhite} 
               alt="Moneywise" 
               className="h-10 transition-transform duration-300 group-hover:scale-105"
             />
