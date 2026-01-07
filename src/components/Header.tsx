@@ -1,10 +1,16 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  // On non-home pages, always use scrolled styling
+  const useScrolledStyle = isScrolled || !isHomePage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +30,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        useScrolledStyle
           ? "glass shadow-premium py-3"
           : "bg-transparent py-5"
       }`}
@@ -36,7 +42,7 @@ const Header = () => {
             <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
               <span className="text-accent-foreground font-bold text-lg">F</span>
             </div>
-            <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
+            <span className={`font-bold text-xl transition-colors duration-300 ${useScrolledStyle ? "text-foreground" : "text-primary-foreground"}`}>
               FocusMembers
             </span>
           </a>
@@ -48,7 +54,7 @@ const Header = () => {
                 key={link.name}
                 href={link.href}
                 className={`transition-colors duration-200 text-sm font-medium animated-underline ${
-                  isScrolled 
+                  useScrolledStyle 
                     ? "text-muted-foreground hover:text-foreground" 
                     : "text-primary-foreground/70 hover:text-primary-foreground"
                 }`}
@@ -63,7 +69,7 @@ const Header = () => {
             <Button 
               variant="ghost" 
               size="sm" 
-              className={isScrolled ? "text-muted-foreground" : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10"}
+              className={useScrolledStyle ? "text-muted-foreground" : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10"}
               asChild
             >
               <a href="/contact">Contact</a>
@@ -75,7 +81,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}
+            className={`md:hidden p-2 transition-colors ${useScrolledStyle ? "text-foreground" : "text-primary-foreground"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
