@@ -15,10 +15,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Features", href: "#features" },
-    { name: "About", href: "#about" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Features", href: "/#features" },
+    { name: "About", href: "/about" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -64,8 +64,9 @@ const Header = () => {
               variant="ghost" 
               size="sm" 
               className={isScrolled ? "text-muted-foreground" : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10"}
+              asChild
             >
-              Contact
+              <a href="/contact">Contact</a>
             </Button>
             <Button variant="accent" size="sm">
               Start Free Trial
