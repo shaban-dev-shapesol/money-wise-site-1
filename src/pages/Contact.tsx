@@ -124,8 +124,7 @@ const Contact = () => {
                     Find quick answers to common questions in our FAQ section.
                   </p>
                   <Button 
-                    variant="outline" 
-                    className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+                    variant="secondary"
                     asChild
                   >
                     <a href="/#faq">View FAQ</a>
