@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Eye, Users, Heart } from "lucide-react";
 import { FadeUp, SlideInLeft, SlideInRight } from "@/components/ui/motion";
+import CountUpStat from "@/components/CountUpStat";
 
 const About = () => {
   const values = [
@@ -86,19 +87,27 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-6">By the Numbers</h3>
                 <div className="grid grid-cols-2 gap-8">
                   <div>
-                    <div className="text-4xl font-bold text-accent mb-2">10K+</div>
+                    <div className="text-4xl font-bold text-accent mb-2">
+                      <CountUpStat end={10} suffix="K+" duration={2000} />
+                    </div>
                     <div className="text-primary-foreground/70">Active Members</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold text-accent mb-2">£500K</div>
+                    <div className="text-4xl font-bold text-accent mb-2">
+                      <CountUpStat end={500} prefix="£" suffix="K" duration={2000} />
+                    </div>
                     <div className="text-primary-foreground/70">Member Savings</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold text-accent mb-2">4.9/5</div>
+                    <div className="text-4xl font-bold text-accent mb-2">
+                      <CountUpStat end={4.9} decimals={1} duration={2000} />/5
+                    </div>
                     <div className="text-primary-foreground/70">Average Rating</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold text-accent mb-2">50+</div>
+                    <div className="text-4xl font-bold text-accent mb-2">
+                      <CountUpStat end={50} suffix="+" duration={2000} />
+                    </div>
                     <div className="text-primary-foreground/70">Partner Brands</div>
                   </div>
                 </div>
