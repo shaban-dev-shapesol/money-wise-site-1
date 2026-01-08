@@ -77,31 +77,31 @@ const Testimonials = () => {
 
         {/* Featured Testimonial */}
         <ScaleIn delay={0.2}>
-          <div className="relative mb-10 max-w-2xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 rounded-2xl blur-lg" />
-            <div className="relative bg-card border border-accent/20 rounded-2xl p-6 md:p-8 text-center">
-              <Quote className="w-8 h-8 text-accent/30 mx-auto mb-4" />
-              <div className="flex justify-center gap-1 mb-4">
+          <div className="relative mb-8 max-w-lg mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 rounded-xl blur-md" />
+            <div className="relative bg-card border border-accent/20 rounded-xl p-4 md:p-5 text-center">
+              <Quote className="w-6 h-6 text-accent/30 mx-auto mb-2" />
+              <div className="flex justify-center gap-0.5 mb-2">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <p className="text-lg md:text-xl text-foreground font-medium mb-6 max-w-xl mx-auto leading-relaxed">
+              <p className="text-base text-foreground font-medium mb-4 max-w-md mx-auto leading-relaxed">
                 "{testimonials[activeIndex].quote}"
               </p>
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-accent/10 flex items-center justify-center">
-                  <span className="text-accent font-bold text-base">
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center">
+                  <span className="text-accent font-bold text-sm">
                     {testimonials[activeIndex].author.charAt(0)}
                   </span>
                 </div>
                 <div className="text-left">
-                  <p className="font-bold text-foreground">{testimonials[activeIndex].author}</p>
-                  <p className="text-muted-foreground text-sm">{testimonials[activeIndex].role}</p>
+                  <p className="font-semibold text-foreground text-sm">{testimonials[activeIndex].author}</p>
+                  <p className="text-muted-foreground text-xs">{testimonials[activeIndex].role}</p>
                 </div>
               </div>
-              <div className="mt-4">
-                <span className="inline-block bg-accent/10 text-accent text-sm font-medium px-3 py-1.5 rounded-full">
+              <div className="mt-3">
+                <span className="inline-block bg-accent/10 text-accent text-xs font-medium px-2.5 py-1 rounded-full">
                   {testimonials[activeIndex].highlight}
                 </span>
               </div>
