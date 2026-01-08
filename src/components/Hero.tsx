@@ -54,7 +54,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8"
           >
             <Users size={16} className="text-accent" />
-            <span className="text-accent text-sm font-medium">Join <CountUpStat end={45000} suffix="+" duration={2000} /> Members</span>
+            <span className="text-accent text-sm font-medium">Join <CountUpStat end={45} suffix="K+" duration={2000} /> Members</span>
           </motion.div>
           {/* Main Headline */}
           <motion.h1 
@@ -123,7 +123,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2 text-primary-foreground/60">
               <Users size={20} className="text-accent" />
-              <span className="text-sm"><CountUpStat end={45000} suffix="+" duration={2000} /> Active Members</span>
+              <span className="text-sm"><CountUpStat end={45} suffix="K+" duration={2000} /> Active Members</span>
             </div>
           </motion.div>
         </div>

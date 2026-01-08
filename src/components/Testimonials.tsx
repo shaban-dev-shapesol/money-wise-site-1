@@ -186,9 +186,9 @@ const Testimonials = () => {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-border">
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                <CountUpStat end={50} suffix="K+" duration={2000} />
+                <CountUpStat end={45} suffix="K+" duration={2000} />
               </p>
-              <p className="text-muted-foreground text-sm">Happy Members</p>
+              <p className="text-muted-foreground text-sm">Active Members</p>
             </div>
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">
@@ -198,15 +198,15 @@ const Testimonials = () => {
             </div>
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                <CountUpStat end={2.5} prefix="£" suffix="M+" decimals={1} duration={2000} />
+                <CountUpStat end={2} prefix="£" suffix="M" duration={2000} />
               </p>
               <p className="text-muted-foreground text-sm">Member Savings</p>
             </div>
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                <CountUpStat end={98} suffix="%" duration={2000} />
+                <CountUpStat end={50} suffix="+" duration={2000} />
               </p>
-              <p className="text-muted-foreground text-sm">Satisfaction Rate</p>
+              <p className="text-muted-foreground text-sm">Partner Brands</p>
             </div>
           </div>
         </FadeUp>
