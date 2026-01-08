@@ -41,6 +41,13 @@ const Header = () => {
     { name: "Contact", href: "/contact", isHash: false },
   ];
 
+  const isActive = (href: string, isHash: boolean) => {
+    if (isHash) {
+      return isHomePage && location.hash === href.substring(1);
+    }
+    return location.pathname === href;
+  };
+
   const handleHashNavigation = (e: React.MouseEvent, href: string) => {
     if (href.startsWith("/#")) {
       e.preventDefault();
@@ -77,16 +84,19 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) =>
-              link.isHash ? (
+            {navLinks.map((link) => {
+              const active = isActive(link.href, link.isHash);
+              return link.isHash ? (
                 <Link
                   key={link.name}
                   to={link.href}
                   onClick={(e) => handleHashNavigation(e, link.href)}
-                  className={`transition-colors duration-200 text-sm font-medium animated-underline ${
-                    useScrolledStyle
-                      ? "text-muted-foreground hover:text-foreground"
-                      : "text-primary-foreground/70 hover:text-primary-foreground"
+                  className={`transition-colors duration-200 text-sm font-medium ${
+                    active
+                      ? "text-accent"
+                      : useScrolledStyle
+                        ? "text-muted-foreground hover:text-foreground animated-underline"
+                        : "text-primary-foreground/70 hover:text-primary-foreground animated-underline"
                   }`}
                 >
                   {link.name}
@@ -95,16 +105,18 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`transition-colors duration-200 text-sm font-medium animated-underline ${
-                    useScrolledStyle
-                      ? "text-muted-foreground hover:text-foreground"
-                      : "text-primary-foreground/70 hover:text-primary-foreground"
+                  className={`transition-colors duration-200 text-sm font-medium ${
+                    active
+                      ? "text-accent"
+                      : useScrolledStyle
+                        ? "text-muted-foreground hover:text-foreground animated-underline"
+                        : "text-primary-foreground/70 hover:text-primary-foreground animated-underline"
                   }`}
                 >
                   {link.name}
                 </Link>
-              ),
-            )}
+              );
+            })}
           </div>
 
           {/* CTA Button */}
@@ -127,16 +139,23 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in bg-background rounded-xl p-4 shadow-lg border border-border">
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  onClick={(e) => handleHashNavigation(e, link.href)}
-                  className="text-foreground hover:text-accent transition-colors duration-200 text-sm font-medium py-2"
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const active = isActive(link.href, link.isHash);
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={(e) => handleHashNavigation(e, link.href)}
+                    className={`transition-colors duration-200 text-sm font-medium py-2 ${
+                      active
+                        ? "text-accent font-semibold"
+                        : "text-foreground hover:text-accent"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
                 <Button variant="accent" size="sm">
                   Start Free Trial
