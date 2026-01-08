@@ -92,7 +92,7 @@ const About = () => {
                   </div>
                   <div>
                     <div className="text-4xl font-bold text-accent mb-2">
-                      <CountUpStat end={500} prefix="£" suffix="K" duration={2000} />
+                      <CountUpStat end={2.5} prefix="£" suffix="M" duration={2000} />
                     </div>
                     <div className="text-primary-foreground/70">Member Savings</div>
                   </div>
