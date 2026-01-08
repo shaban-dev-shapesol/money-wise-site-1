@@ -1,5 +1,6 @@
 import { BookOpen, Gift, HeadphonesIcon, ArrowRight } from "lucide-react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -21,7 +22,7 @@ const features = [
     title: "Need Help? We're Here.",
     description: "Get quick support for anything related to your membership or dashboard access.",
     cta: "Contact Us",
-    href: "#",
+    href: "/contact",
   },
 ];
 
@@ -67,13 +68,23 @@ const Features = () => {
                 </p>
 
                 {/* CTA Link - pushed to bottom */}
-                <a
-                  href={feature.href}
-                  className="inline-flex items-center text-accent font-semibold group/link mt-auto"
-                >
-                  {feature.cta}
-                  <ArrowRight size={16} className="ml-2 transition-transform group-hover/link:translate-x-1" />
-                </a>
+                {feature.href.startsWith("/") ? (
+                  <Link
+                    to={feature.href}
+                    className="inline-flex items-center text-accent font-semibold group/link mt-auto"
+                  >
+                    {feature.cta}
+                    <ArrowRight size={16} className="ml-2 transition-transform group-hover/link:translate-x-1" />
+                  </Link>
+                ) : (
+                  <a
+                    href={feature.href}
+                    className="inline-flex items-center text-accent font-semibold group/link mt-auto"
+                  >
+                    {feature.cta}
+                    <ArrowRight size={16} className="ml-2 transition-transform group-hover/link:translate-x-1" />
+                  </a>
+                )}
               </div>
             </StaggerItem>
           ))}
