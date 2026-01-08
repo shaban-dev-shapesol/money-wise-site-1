@@ -45,33 +45,31 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        useScrolledStyle
-          ? "glass shadow-premium py-3"
-          : "bg-transparent py-5"
+        useScrolledStyle ? "glass shadow-premium py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container-custom">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <img 
-              src={useScrolledStyle ? logo : logoWhite} 
-              alt="Moneywise" 
-              className="h-10 transition-transform duration-300 group-hover:scale-105"
+            <img
+              src={useScrolledStyle ? logo : logoWhite}
+              alt="Moneywise"
+              className="h-[3rem] transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinks.map((link) =>
               link.isHash ? (
                 <Link
                   key={link.name}
                   to={link.href}
                   onClick={() => handleHashNavigation(link.href)}
                   className={`transition-colors duration-200 text-sm font-medium animated-underline ${
-                    useScrolledStyle 
-                      ? "text-muted-foreground hover:text-foreground" 
+                    useScrolledStyle
+                      ? "text-muted-foreground hover:text-foreground"
                       : "text-primary-foreground/70 hover:text-primary-foreground"
                   }`}
                 >
@@ -82,15 +80,15 @@ const Header = () => {
                   key={link.name}
                   to={link.href}
                   className={`transition-colors duration-200 text-sm font-medium animated-underline ${
-                    useScrolledStyle 
-                      ? "text-muted-foreground hover:text-foreground" 
+                    useScrolledStyle
+                      ? "text-muted-foreground hover:text-foreground"
                       : "text-primary-foreground/70 hover:text-primary-foreground"
                   }`}
                 >
                   {link.name}
                 </Link>
-              )
-            ))}
+              ),
+            )}
           </div>
 
           {/* CTA Button */}
