@@ -15,12 +15,12 @@ const Footer = () => {
     Support: [
       { name: "Contact Us", href: "/contact", isExternal: false },
       { name: "FAQ", href: "/#faq", isExternal: false },
-      { name: "Help Center", href: "/contact", isExternal: false },
+      { name: "Help Center", href: "/help", isExternal: false },
     ],
     Legal: [
-      { name: "Privacy Policy", href: "#", isExternal: true },
-      { name: "Terms of Service", href: "#", isExternal: true },
-      { name: "Cookie Policy", href: "#", isExternal: true },
+      { name: "Privacy Policy", href: "/privacy", isExternal: false },
+      { name: "Terms of Service", href: "/terms", isExternal: false },
+      { name: "Cookie Policy", href: "/cookies", isExternal: false },
     ],
   };
 

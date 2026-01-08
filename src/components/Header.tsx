@@ -124,9 +124,6 @@ const Header = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="justify-start text-foreground" asChild>
-                  <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-                </Button>
                 <Button variant="accent" size="sm">
                   Start Free Trial
                 </Button>
