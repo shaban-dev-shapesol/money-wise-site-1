@@ -52,7 +52,7 @@ const Features = () => {
         <StaggerContainer className="grid md:grid-cols-3 gap-6 lg:gap-8" staggerDelay={0.15}>
           {features.map((feature, index) => (
             <StaggerItem key={index}>
-              <div className="premium-card group cursor-pointer h-full">
+              <div className="premium-card group cursor-pointer h-full flex flex-col">
                 {/* Icon */}
                 <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-accent group-hover:shadow-glow">
                   <feature.icon className="w-7 h-7 text-accent transition-colors duration-300 group-hover:text-accent-foreground" />
@@ -62,14 +62,14 @@ const Features = () => {
                 <h3 className="text-xl font-bold text-foreground mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">
                   {feature.description}
                 </p>
 
-                {/* CTA Link */}
+                {/* CTA Link - pushed to bottom */}
                 <a
                   href={feature.href}
-                  className="inline-flex items-center text-accent font-semibold group/link"
+                  className="inline-flex items-center text-accent font-semibold group/link mt-auto"
                 >
                   {feature.cta}
                   <ArrowRight size={16} className="ml-2 transition-transform group-hover/link:translate-x-1" />
