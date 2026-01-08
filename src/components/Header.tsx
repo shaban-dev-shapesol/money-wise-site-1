@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/moneywise-logo.png";
@@ -9,6 +9,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
   // On non-home pages, always use scrolled styling
@@ -22,6 +23,17 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle hash scroll after navigation
+  useEffect(() => {
+    if (location.hash) {
+      // Small delay to ensure page has rendered
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location]);
+
   const navLinks = [
     { name: "Features", href: "/#features", isHash: true },
     { name: "About", href: "/about", isHash: false },
@@ -29,15 +41,19 @@ const Header = () => {
     { name: "Contact", href: "/contact", isHash: false },
   ];
 
-  const handleHashNavigation = (href: string) => {
+  const handleHashNavigation = (e: React.MouseEvent, href: string) => {
     if (href.startsWith("/#")) {
-      const hash = href.substring(1);
+      e.preventDefault();
+      const hash = href.substring(1); // Gets "#features"
+      
       if (isHomePage) {
         // Already on home, just scroll
         const element = document.querySelector(hash);
         element?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // Navigate to home with hash
+        navigate("/" + hash);
       }
-      // If not on home, Link will navigate, then scroll happens via browser
     }
     setIsMobileMenuOpen(false);
   };
@@ -66,7 +82,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  onClick={() => handleHashNavigation(link.href)}
+                  onClick={(e) => handleHashNavigation(e, link.href)}
                   className={`transition-colors duration-200 text-sm font-medium animated-underline ${
                     useScrolledStyle
                       ? "text-muted-foreground hover:text-foreground"
@@ -115,7 +131,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  onClick={() => handleHashNavigation(link.href)}
+                  onClick={(e) => handleHashNavigation(e, link.href)}
                   className="text-foreground hover:text-accent transition-colors duration-200 text-sm font-medium py-2"
                 >
                   {link.name}
