@@ -101,7 +101,7 @@ const Header = () => {
                 >
                   {link.name}
                   {active && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-accent" />
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent rounded-full" />
                   )}
                 </Link>
               );
@@ -135,15 +135,12 @@ const Header = () => {
                     key={link.name}
                     to={link.href}
                     onClick={(e) => handleHashNavigation(e, link.href)}
-                    className={`flex items-center gap-2 transition-colors duration-200 text-sm font-medium py-2 ${
+                    className={`relative transition-colors duration-200 text-sm font-medium py-2 pl-3 border-l-2 ${
                       active
-                        ? "text-accent font-semibold"
-                        : "text-foreground hover:text-accent"
+                        ? "text-accent font-semibold border-accent"
+                        : "text-foreground hover:text-accent border-transparent"
                     }`}
                   >
-                    {active && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                    )}
                     {link.name}
                   </Link>
                 );
