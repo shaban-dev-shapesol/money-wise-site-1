@@ -86,12 +86,12 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
               const active = isActive(link.href, link.isHash);
-              return link.isHash ? (
+              return (
                 <Link
                   key={link.name}
                   to={link.href}
-                  onClick={(e) => handleHashNavigation(e, link.href)}
-                  className={`transition-colors duration-200 text-sm font-medium ${
+                  onClick={link.isHash ? (e) => handleHashNavigation(e, link.href) : undefined}
+                  className={`relative transition-colors duration-200 text-sm font-medium pb-1 ${
                     active
                       ? "text-accent"
                       : useScrolledStyle
@@ -100,20 +100,9 @@ const Header = () => {
                   }`}
                 >
                   {link.name}
-                </Link>
-              ) : (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className={`transition-colors duration-200 text-sm font-medium ${
-                    active
-                      ? "text-accent"
-                      : useScrolledStyle
-                        ? "text-muted-foreground hover:text-foreground animated-underline"
-                        : "text-primary-foreground/70 hover:text-primary-foreground animated-underline"
-                  }`}
-                >
-                  {link.name}
+                  {active && (
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-accent" />
+                  )}
                 </Link>
               );
             })}
@@ -146,12 +135,15 @@ const Header = () => {
                     key={link.name}
                     to={link.href}
                     onClick={(e) => handleHashNavigation(e, link.href)}
-                    className={`transition-colors duration-200 text-sm font-medium py-2 ${
+                    className={`flex items-center gap-2 transition-colors duration-200 text-sm font-medium py-2 ${
                       active
                         ? "text-accent font-semibold"
                         : "text-foreground hover:text-accent"
                     }`}
                   >
+                    {active && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    )}
                     {link.name}
                   </Link>
                 );
