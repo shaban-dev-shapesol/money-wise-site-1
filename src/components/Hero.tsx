@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Star, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import dashboardMockup from "@/assets/dashboard-mockup.png";
-
+import CountUpStat from "@/components/CountUpStat";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden">
@@ -54,9 +54,8 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8"
           >
             <Users size={16} className="text-accent" />
-            <span className="text-accent text-sm font-medium">Join 45,000+ Members</span>
+            <span className="text-accent text-sm font-medium">Join <CountUpStat end={45000} suffix="+" duration={2000} /> Members</span>
           </motion.div>
-
           {/* Main Headline */}
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
@@ -120,11 +119,11 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2 text-primary-foreground/60">
               <Star size={20} className="text-accent" />
-              <span className="text-sm">4.9/5 Member Rating</span>
+              <span className="text-sm"><CountUpStat end={4.9} decimals={1} duration={2000} />/5 Member Rating</span>
             </div>
             <div className="flex items-center gap-2 text-primary-foreground/60">
               <Users size={20} className="text-accent" />
-              <span className="text-sm">45,000+ Active Members</span>
+              <span className="text-sm"><CountUpStat end={45000} suffix="+" duration={2000} /> Active Members</span>
             </div>
           </motion.div>
         </div>

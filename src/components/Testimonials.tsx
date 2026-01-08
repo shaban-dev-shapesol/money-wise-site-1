@@ -2,7 +2,7 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { FadeUp, ScaleIn } from "@/components/ui/motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-
+import CountUpStat from "@/components/CountUpStat";
 const testimonials = [
   {
     quote: "Money Wise has completely transformed how I manage my finances. The budgeting tools are intuitive and the discount codes alone pay for the subscription!",
@@ -185,19 +185,27 @@ const Testimonials = () => {
         <FadeUp delay={0.4}>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-border">
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">50K+</p>
+              <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                <CountUpStat end={50} suffix="K+" duration={2000} />
+              </p>
               <p className="text-muted-foreground text-sm">Happy Members</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">4.9</p>
+              <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                <CountUpStat end={4.9} decimals={1} duration={2000} />
+              </p>
               <p className="text-muted-foreground text-sm">Average Rating</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">£2.5M+</p>
+              <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                <CountUpStat end={2.5} prefix="£" suffix="M+" decimals={1} duration={2000} />
+              </p>
               <p className="text-muted-foreground text-sm">Member Savings</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">98%</p>
+              <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                <CountUpStat end={98} suffix="%" duration={2000} />
+              </p>
               <p className="text-muted-foreground text-sm">Satisfaction Rate</p>
             </div>
           </div>
