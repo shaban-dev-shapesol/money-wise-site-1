@@ -42,8 +42,9 @@ const Header = () => {
   ];
 
   const isActive = (href: string, isHash: boolean) => {
+    // Hash links (section anchors) should not show as active
     if (isHash) {
-      return isHomePage && location.hash === href.substring(1);
+      return false;
     }
     return location.pathname === href;
   };
