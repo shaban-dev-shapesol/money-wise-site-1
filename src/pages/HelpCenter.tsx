@@ -4,6 +4,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Search, BookOpen, MessageCircle, CreditCard, Settings, Shield, HelpCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const helpCategories = [
   {
@@ -35,6 +36,10 @@ const helpCategories = [
 const HelpCenter = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Help Center - FAQs & Support Articles"
+        description="Find answers to common questions about Money Wise. Browse help articles on getting started, billing, account settings, security, and more."
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-custom">

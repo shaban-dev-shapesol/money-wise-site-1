@@ -5,13 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageSquare, Clock } from "lucide-react";
 import { FadeUp, SlideInLeft, SlideInRight } from "@/components/ui/motion";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
       title: "Email Us",
-      description: "support@focusmembers.com",
+      description: "support@moneywise.com",
       detail: "We'll respond within 24 hours",
     },
     {
@@ -30,6 +31,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact Us - Get Support & Help"
+        description="Have questions about Money Wise? Contact our friendly support team. We respond within 24 hours. Email, live chat, and help center available."
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-custom">

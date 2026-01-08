@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { FadeUp, ScaleIn } from "@/components/ui/motion";
+import SEO from "@/components/SEO";
 
 const Pricing = () => {
   const features = [
@@ -16,6 +17,10 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Pricing - Simple & Affordable Plans"
+        description="Get Money Wise Pro for just £3.99/month. Includes budget planners, expense trackers, exclusive discounts & more. Start your free 1-month trial today."
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-custom">

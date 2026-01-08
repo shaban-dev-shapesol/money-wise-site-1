@@ -1,10 +1,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FadeUp } from "@/components/ui/motion";
+import SEO from "@/components/SEO";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Terms of Service - User Agreement"
+        description="Read Money Wise terms of service. Understand your rights, subscription terms, billing policies, and our commitment to providing quality financial tools."
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-custom max-w-4xl">
