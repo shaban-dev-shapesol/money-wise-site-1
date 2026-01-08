@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Target, Eye, Users, Heart } from "lucide-react";
 import { FadeUp, SlideInLeft, SlideInRight } from "@/components/ui/motion";
 import CountUpStat from "@/components/CountUpStat";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const values = [
@@ -33,6 +34,10 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="About Us - Our Mission & Story"
+        description="Learn how Money Wise helps 45,000+ members manage their finances with simple budgeting tools and exclusive savings. Discover our mission, vision, and values."
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-custom">

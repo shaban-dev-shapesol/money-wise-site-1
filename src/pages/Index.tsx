@@ -7,10 +7,15 @@ import SpecialOffer from "@/components/SpecialOffer";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Money Wise | Budget Tools & Exclusive Member Savings"
+        description="Join 45,000+ members saving smarter. Get monthly budget planners, expense trackers, exclusive discount codes & member-only perks. Start free trial today."
+      />
       <Header />
       <main>
         <Hero />

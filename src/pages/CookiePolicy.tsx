@@ -1,10 +1,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FadeUp } from "@/components/ui/motion";
+import SEO from "@/components/SEO";
 
 const CookiePolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Cookie Policy - How We Use Cookies"
+        description="Learn about the cookies Money Wise uses to improve your experience. Understand cookie types, purposes, and how to manage your preferences."
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-custom max-w-4xl">

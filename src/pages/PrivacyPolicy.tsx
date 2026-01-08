@@ -1,10 +1,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FadeUp } from "@/components/ui/motion";
+import SEO from "@/components/SEO";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Privacy Policy - How We Protect Your Data"
+        description="Learn how Money Wise collects, uses, and protects your personal information. Your privacy and data security are our top priority."
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-custom max-w-4xl">
