@@ -8,7 +8,7 @@ const SpecialOffer = () => {
       {/* Background Effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-      
+
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center">
@@ -29,7 +29,8 @@ const SpecialOffer = () => {
 
             <FadeUp delay={0.2}>
               <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto mb-8">
-                Unlock exclusive member-only discount vouchers, limited-time deals, and monthly freebies — available only inside your Money Wise dashboard.
+                Unlock exclusive member-only discount vouchers, limited-time deals, and monthly freebies — available
+                only inside your Money Wizee dashboard.
               </p>
             </FadeUp>
 
@@ -47,19 +48,17 @@ const SpecialOffer = () => {
             {/* Benefits */}
             <FadeUp delay={0.4}>
               <div className="flex flex-wrap justify-center gap-4 mb-10">
-                {[
-                  "50% off when you subscribe today",
-                  "Expert-level content",
-                  "Cancel anytime",
-                ].map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10"
-                  >
-                    <Check size={16} className="text-accent" />
-                    <span className="text-primary-foreground/80 text-sm">{benefit}</span>
-                  </div>
-                ))}
+                {["50% off when you subscribe today", "Expert-level content", "Cancel anytime"].map(
+                  (benefit, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10"
+                    >
+                      <Check size={16} className="text-accent" />
+                      <span className="text-primary-foreground/80 text-sm">{benefit}</span>
+                    </div>
+                  ),
+                )}
               </div>
             </FadeUp>
 
