@@ -10,7 +10,7 @@ const helpCategories = [
   {
     icon: BookOpen,
     title: "Getting Started",
-    description: "Learn the basics of using Money Wise",
+    description: "Learn the basics of using MoneyWizee",
     articles: ["Creating your account", "Setting up your first budget", "Connecting your goals"],
   },
   {
@@ -22,7 +22,7 @@ const helpCategories = [
   {
     icon: Settings,
     title: "Account Settings",
-    description: "Customize your Money Wise experience",
+    description: "Customize your MoneyWizee experience",
     articles: ["Profile settings", "Notification preferences", "Data export"],
   },
   {
@@ -38,7 +38,7 @@ const HelpCenter = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Help Center - FAQs & Support Articles"
-        description="Find answers to common questions about Money Wise. Browse help articles on getting started, billing, account settings, security, and more."
+        description="Find answers to common questions about MoneyWizee. Browse help articles on getting started, billing, account settings, security, and more."
       />
       <Header />
       <main className="pt-32 pb-20">

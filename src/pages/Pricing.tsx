@@ -19,7 +19,7 @@ const Pricing = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Pricing - Simple & Affordable Plans"
-        description="Get Money Wise Pro for just £3.99/month. Includes budget planners, expense trackers, exclusive discounts & more. Start your free 1-month trial today."
+        description="Get MoneyWizee Pro for just £3.99/month. Includes budget planners, expense trackers, exclusive discounts & more. Start your free 1-month trial today."
       />
       <Header />
       <main className="pt-32 pb-20">
@@ -43,7 +43,7 @@ const Pricing = () => {
                     Most Popular
                   </span>
                   <h2 className="text-2xl font-bold text-foreground mb-2">
-                    Money Wise Pro
+                    MoneyWizee Pro
                   </h2>
                   <div className="flex items-baseline justify-center gap-1">
                     <span className="text-5xl font-bold text-foreground">£3.99</span>

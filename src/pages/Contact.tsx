@@ -33,7 +33,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Contact Us - Get Support & Help"
-        description="Have questions about Money Wise? Contact our friendly support team. We respond within 24 hours. Email, live chat, and help center available."
+        description="Have questions about MoneyWizee? Contact our friendly support team. We respond within 24 hours. Email, live chat, and help center available."
       />
       <Header />
       <main className="pt-32 pb-20">
