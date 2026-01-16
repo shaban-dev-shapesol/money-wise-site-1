@@ -8,7 +8,7 @@ const TermsOfService = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Terms of Service - User Agreement"
-        description="Read Money Wise terms of service. Understand your rights, subscription terms, billing policies, and our commitment to providing quality financial tools."
+        description="Read MoneyWizee terms of service. Understand your rights, subscription terms, billing policies, and our commitment to providing quality financial tools."
       />
       <Header />
       <main className="pt-32 pb-20">
@@ -32,7 +32,7 @@ const TermsOfService = () => {
                   1. Acceptance of Terms
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  By accessing and using Money Wise services, you accept and agree to be bound by the 
+                  By accessing and using MoneyWizee services, you accept and agree to be bound by the 
                   terms and provisions of this agreement. If you do not agree to abide by these terms, 
                   please do not use our services.
                 </p>
@@ -45,7 +45,7 @@ const TermsOfService = () => {
                   2. Description of Service
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Money Wise provides financial planning tools, budget trackers, and exclusive member 
+                  MoneyWizee provides financial planning tools, budget trackers, and exclusive member 
                   discounts to help you manage your personal finances more effectively. Our services 
                   are available through our website and mobile applications.
                 </p>
@@ -84,7 +84,7 @@ const TermsOfService = () => {
                   5. Intellectual Property
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  All content, features, and functionality of our services are owned by Money Wise and 
+                  All content, features, and functionality of our services are owned by MoneyWizee and 
                   are protected by international copyright, trademark, and other intellectual property laws.
                 </p>
               </section>
@@ -96,7 +96,7 @@ const TermsOfService = () => {
                   6. Limitation of Liability
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Money Wise shall not be liable for any indirect, incidental, special, consequential, 
+                  MoneyWizee shall not be liable for any indirect, incidental, special, consequential, 
                   or punitive damages resulting from your use of or inability to use our services.
                 </p>
               </section>

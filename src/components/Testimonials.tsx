@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import CountUpStat from "@/components/CountUpStat";
 const testimonials = [
   {
-    quote: "Money Wise has completely transformed how I manage my finances. The budgeting tools are intuitive and the discount codes alone pay for the subscription!",
+    quote: "MoneyWizee has completely transformed how I manage my finances. The budgeting tools are intuitive and the discount codes alone pay for the subscription!",
     author: "Samantha R",
     role: "Freelance Designer",
     rating: 5,
@@ -70,7 +70,7 @@ const Testimonials = () => {
           </FadeUp>
           <FadeUp delay={0.15}>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Join thousands of satisfied members who are taking control of their finances with Money Wise.
+              Join thousands of satisfied members who are taking control of their finances with MoneyWizee.
             </p>
           </FadeUp>
         </div>

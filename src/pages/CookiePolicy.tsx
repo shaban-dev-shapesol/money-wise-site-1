@@ -8,7 +8,7 @@ const CookiePolicy = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Cookie Policy - How We Use Cookies"
-        description="Learn about the cookies Money Wise uses to improve your experience. Understand cookie types, purposes, and how to manage your preferences."
+        description="Learn about the cookies MoneyWizee uses to improve your experience. Understand cookie types, purposes, and how to manage your preferences."
       />
       <Header />
       <main className="pt-32 pb-20">

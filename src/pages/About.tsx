@@ -36,14 +36,14 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="About Us - Our Mission & Story"
-        description="Learn how Money Wise helps 45,000+ members manage their finances with simple budgeting tools and exclusive savings. Discover our mission, vision, and values."
+        description="Learn how MoneyWizee helps 45,000+ members manage their finances with simple budgeting tools and exclusive savings. Discover our mission, vision, and values."
       />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container-custom">
           <FadeUp>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About Money Wise</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About MoneyWizee</h1>
               <p className="text-lg text-muted-foreground">
                 We're on a mission to make financial planning simple, accessible, and rewarding for everyone.
               </p>
@@ -70,7 +70,7 @@ const About = () => {
                 <h2 className="text-3xl font-bold text-foreground mb-6">Why We Started</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Money Wise was born from a simple observation: managing money shouldn't be complicated. Yet, for
+                    MoneyWizee was born from a simple observation: managing money shouldn't be complicated. Yet, for
                     many people, it feels overwhelming and stressful.
                   </p>
                   <p>

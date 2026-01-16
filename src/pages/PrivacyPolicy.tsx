@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Privacy Policy - How We Protect Your Data"
-        description="Learn how Money Wise collects, uses, and protects your personal information. Your privacy and data security are our top priority."
+        description="Learn how MoneyWizee collects, uses, and protects your personal information. Your privacy and data security are our top priority."
       />
       <Header />
       <main className="pt-32 pb-20">
